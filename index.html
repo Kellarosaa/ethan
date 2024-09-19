@@ -62,7 +62,7 @@
         document.getElementById('upgrade2').onclick = function() {
             if (ethanBucks >= 30) {
                 ethanBucks -= 30;
-                clickValue = 3;
+                clickValue = 5;
                 updateStorage();
             }
         };
@@ -76,14 +76,6 @@
                     ethanBucks += clickValue;
                     updateStorage();
                 }, 1000);
-            }
-        };
-
-        document.getElementById('futureUpgrade').onclick = function() {
-            if (ethanBucks >= 100) {
-                ethanBucks -= 100;
-                // Future upgrade logic can be added here
-                updateStorage();
             }
         };
 
