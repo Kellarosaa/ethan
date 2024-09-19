@@ -40,7 +40,57 @@
         <button id="futureUpgrade">Future Upgrade (Cost: 100 Ethan Bucks)</button>
     </div>
     <script>
-        // JavaScript code remains unchanged
+    let ethanBucks = localStorage.getItem('ethanBucks') ? parseInt(localStorage.getItem('ethanBucks')) : 0;
+        let clickValue = 1;
+        let autoClickerActive = false;
+
+        document.getElementById('ethanBucks').innerText = ethanBucks;
+
+        document.getElementById('clickButton').onclick = function() {
+            ethanBucks += clickValue;
+            updateStorage();
+        };
+
+        document.getElementById('upgrade1').onclick = function() {
+            if (ethanBucks >= 10) {
+                ethanBucks -= 10;
+                clickValue = 2;
+                updateStorage();
+            }
+        };
+
+        document.getElementById('upgrade2').onclick = function() {
+            if (ethanBucks >= 30) {
+                ethanBucks -= 30;
+                clickValue = 3;
+                updateStorage();
+            }
+        };
+
+        document.getElementById('autoClicker').onclick = function() {
+            if (ethanBucks >= 50 && !autoClickerActive) {
+                ethanBucks -= 50;
+                autoClickerActive = true;
+                updateStorage();
+                setInterval(function() {
+                    ethanBucks += clickValue;
+                    updateStorage();
+                }, 1000);
+            }
+        };
+
+        document.getElementById('futureUpgrade').onclick = function() {
+            if (ethanBucks >= 100) {
+                ethanBucks -= 100;
+                // Future upgrade logic can be added here
+                updateStorage();
+            }
+        };
+
+        function updateStorage() {
+            localStorage.setItem('ethanBucks', ethanBucks);
+            document.getElementById('ethanBucks').innerText = ethanBucks;
+        }
     </script>
 </body>
 </html>
