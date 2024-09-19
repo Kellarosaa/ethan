@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ethan Clicker</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #e9ecef; }
+        #game { margin-top: 50px; }
+        button { 
+            padding: 12px 25px; 
+            font-size: 18px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            background-color: #007bff; 
+            color: white; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+        button:hover { 
+            background-color: #0056b3; 
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+        }
+        #upgrades { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Ethan Clicker</h1>
+    <div id="game">
+        <h2>Ethan Bucks: <span id="ethanBucks">0</span></h2>
+        <button id="clickButton">Click me!</button>
+    </div>
+    <div id="upgrades">
+        <h3>Upgrades</h3>
+        <button id="upgrade1">Upgrade: +1 Ethan Buck per click (Cost: 10 Ethan Bucks)</button>
+        <button id="upgrade2">Upgrade: +2 Ethan Bucks per click (Cost: 30 Ethan Bucks)</button>
+        <button id="autoClicker">Auto Clicker (Cost: 50 Ethan Bucks)</button>
+        <button id="futureUpgrade">Future Upgrade (Cost: 100 Ethan Bucks)</button>
+    </div>
+    <script>
+        // JavaScript code remains unchanged
+    </script>
+</body>
+</html>
